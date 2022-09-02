@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -27,6 +28,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'telefono',
+        'role',
+        'estatus',
+        'roles_id',
+        'permisos',
+        'plataforma',
+        'dispositivos_id',
+        'profile_photo_path'
     ];
 
     /**
@@ -61,16 +70,26 @@ class User extends Authenticatable
 
     public function adminlte_image()
     {
-        return 'https://picsum.photos/300/300';
+        //return 'https://picsum.photos/300/300';
+        return verImagen(auth()->user()->profile_photo_path, auth()->user()->name);
     }
 
     public function adminlte_desc()
     {
-        return 'That\'s a nice guy';
+        return Auth::user()->email;
     }
 
     public function adminlte_profile_url()
     {
-        return 'profile/username';
+        return 'user/profile';
     }
+
+    public function scopeBuscar($query, $keyword)
+    {
+        return $query->where('name', 'LIKE', "%$keyword%")
+            ->orWhere('email', 'LIKE', "%$keyword%")
+            ->orWhere('id', 'LIKE', "%$keyword%")
+            ;
+    }
+
 }

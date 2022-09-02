@@ -1,9 +1,9 @@
-@extends('adminlte::page')
-
-
-@section('content')
-
-
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Profile') }}
+        </h2>
+    </x-slot>
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             @if (Laravel\Fortify\Features::canUpdateProfileInformation())
@@ -41,31 +41,4 @@
             @endif
         </div>
     </div>
-
-    @stack('modals')
-@stop
-
-@section('footer')
-    @include('dashboard.footer')
-@stop
-
-@section('css')
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-    <!-- Styles -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-@stop
-
-@section('js')
-    <!-- Scripts -->
-    <script> console.log('Hi!'); </script>
-@stop
-
-@section('right-sidebar')
-    @include('dashboard.right-sidebar')
-@endsection
-
-
-
-
+</x-app-layout>
