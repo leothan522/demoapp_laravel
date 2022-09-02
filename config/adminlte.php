@@ -16,7 +16,7 @@ return [
 
     'title' => 'AdminLTE 3',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => " | ". env('APP_NAME'),
 
     /*
     |--------------------------------------------------------------------------
