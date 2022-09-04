@@ -1,4 +1,4 @@
-<div class="card card-gray-dark" style="height: inherit; width: inherit; transition: all 0.15s ease 0s;">
+<div class="card card-gray-dark" xmlns:wire="http://www.w3.org/1999/xhtml">
     <div class="card-header">
         <h3 class="card-title">
             @if(/*$view == 'create'*/true)
@@ -21,6 +21,7 @@
 
     <!-- /.card-body -->
     </div>
+
     <div class="overlay-wrapper" wire:loading>
         <div class="overlay">
             <i class="fas fa-2x fa-sync-alt"></i>
@@ -29,7 +30,7 @@
 
 </div>
 
-<div class="card card-outline card-purple" style="height: inherit; width: inherit; transition: all 0.15s ease 0s;">
+<div class="card card-outline card-primary">
     <div class="card-header">
         <h3 class="card-title">
 

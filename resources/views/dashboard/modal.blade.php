@@ -10,7 +10,7 @@
     </div>
 </div>--}}
 
-<div wire:ignore.self class="modal fade" id="modal-lg">
+<div wire:ignore.self class="modal fade" id="modal-lg" xmlns:wire="http://www.w3.org/1999/xhtml">
     <div class="modal-dialog modal-lg">
         <div class="modal-content fondo">
             <div class="modal-header">
@@ -21,11 +21,7 @@
             </div>
             <div class="modal-body">
 
-                <div wire:loading>
-                    <div class="overlay">
-                        <i class="fas fa-2x fa-sync-alt"></i>
-                    </div>
-                </div>
+
 
 
 
@@ -34,6 +30,19 @@
             <div class="modal-footer justify-content-end">
                 <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">{{ __('Close') }}</button>
             </div>
+
+            {{--<div wire:loading>
+                <div class="overlay">
+                    <i class="fas fa-2x fa-sync-alt"></i>
+                </div>
+            </div>--}}
+
+            <div class="overlay-wrapper" wire:loading>
+                <div class="overlay">
+                    <i class="fas fa-2x fa-sync-alt"></i>
+                </div>
+            </div>
+
         </div>
         <!-- /.modal-content -->
     </div>

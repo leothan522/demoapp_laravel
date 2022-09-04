@@ -1,5 +1,5 @@
 <div class="table-responsive" xmlns:wire="http://www.w3.org/1999/xhtml">
-    <table class="table table-hover bg-light">
+    <table class="table table-sm table-hover bg-light">
         <thead class="thead-dark">
         <tr>
             <th scope="col" class="text-center">id</th>

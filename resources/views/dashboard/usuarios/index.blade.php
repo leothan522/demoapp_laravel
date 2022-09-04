@@ -88,19 +88,22 @@
                                class="btn btn-tool text-success swalDefaultInfo" {{--target="_blank"--}}>
                                 <i class="fas fa-file-excel"></i> <i class="fas fa-download"></i>
                             </a>
-                            {{--<a href="{{ route('usuarios.pdf') }}"
-                               class="btn btn-tool text-danger swalDefaultInfo" target="_blank">
-                                <i class="fas fa-file-pdf"></i> <i class="fas fa-arrow-alt-circle-right"></i>
-                            </a>--}}
                         @else
                             <a href="{{ route('usuarios.excel') }}"
                                class="btn btn-tool text-success swalDefaultInfo disabled" {{--target="_blank"--}}>
                                 <i class="fas fa-file-excel"></i> <i class="fas fa-download"></i>
                             </a>
-                            {{--<a href="{{ route('usuarios.pdf') }}"
-                               class="btn btn-tool text-danger swalDefaultInfo disabled" target="_blank">
+                        @endif
+                        @if(leerJson(Auth::user()->permisos, 'usuarios.pdf') || Auth::user()->role == 1 || Auth::user()->role == 100)
+                            <a href="{{ route('usuarios.pdf') }}"
+                               class="btn btn-tool text-danger swalDefaultInfo" {{--target="_blank"--}}>
                                 <i class="fas fa-file-pdf"></i> <i class="fas fa-arrow-alt-circle-right"></i>
-                            </a>--}}
+                            </a>
+                        @else
+                            <a href="{{ route('usuarios.pdf') }}"
+                               class="btn btn-tool text-danger swalDefaultInfo disabled" {{--target="_blank"--}}>
+                                <i class="fas fa-file-pdf"></i> <i class="fas fa-arrow-alt-circle-right"></i>
+                            </a>
                         @endif
                     @endif
                     <button type="button" class="btn btn-tool" data-card-widget="maximize"><i class="fas fa-expand"></i></button>
@@ -118,9 +121,9 @@
 
         <div class="row justify-content-end p-3">
             <div class="col-md-3">
-                    <span>
-                    {{ $users->render() }}
-                    </span>
+                <span>
+                {{ $users->render() }}
+                </span>
             </div>
         </div>
 

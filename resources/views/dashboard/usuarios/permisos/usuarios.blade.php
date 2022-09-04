@@ -57,7 +57,7 @@
                     <label class="custom-control-label" for="customSwitch5"></label>
                 </div>
             </li>
-            {{--<li class="list-group-item">
+            <li class="list-group-item">
                 Descargar PDF
                 <div class="custom-control custom-switch custom-switch-on-success float-right">
                     <input type="checkbox" wire:click="updatePermisos({{ $tabla_id }}, 'usuarios.pdf')"
@@ -65,7 +65,7 @@
                            class="custom-control-input" id="customSwitch7" @if(is_null($tabla_id)) disabled @endif>
                     <label class="custom-control-label" for="customSwitch7"></label>
                 </div>
-            </li>--}}
+            </li>
             <li class="list-group-item">
                 Eliminar Usuarios
                 <div class="custom-control custom-switch custom-switch-on-success float-right">
