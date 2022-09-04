@@ -24,7 +24,8 @@ class UsersExport implements FromView, WithTitle, WithProperties, ShouldAutoSize
         // TODO: Implement view() method.
         $users = User::buscar($this->busqueda)->orderBy('id', 'DESC')->get();
         return view('dashboard.export.usuarios_registrados')
-            ->with('users', $users);
+            ->with('users', $users)
+            ->with('img', false);
     }
 
     public function title(): string

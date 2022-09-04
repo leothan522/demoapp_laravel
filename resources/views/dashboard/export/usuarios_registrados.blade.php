@@ -23,3 +23,6 @@
     </tbody>
 </table>
 
+@if($img)
+    <img src="{{ asset('img/qrcodes/qrcode.svg') }}">
+@endif
