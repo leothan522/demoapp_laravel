@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table class="table table-hover bg-light">
+    <table class="table table {{--table-sm--}} table-hover bg-light">
         <thead class="thead-dark">
         <tr>
             <th scope="col">Zonas</th>

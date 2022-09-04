@@ -1,20 +1,20 @@
 <div class="p-3">
-    {{--<h5>Title</h5>
-    <p>Sidebar content</p>--}}
+    <h5>Title</h5>
+    <p>Sidebar content</p>
 
-    <ul class="nav nav-pills flex-column">
+   {{-- <ul class="nav nav-pills flex-column">
         hola
         <li class="dropdown-divider"></li>
         <li class="nav-item">
             <span class="text-small text-muted float-right">Web</span>
         </li>
-        {{--<li class="nav-item">
+        --}}{{--<li class="nav-item">
             <a href="{{ route('web.home') }}" class="nav-link" target="_blank">
                 <i class="fas fa-store-alt"></i> Inicio
             </a>
-        </li>--}}
+        </li>--}}{{--
         @if(Auth::user()->role == 100)
-        {{--<li class="dropdown-divider"></li>
+        --}}{{--<li class="dropdown-divider"></li>
         <li class="nav-item">
             <span class="text-small text-muted float-right">Android</span>
         </li>
@@ -52,18 +52,18 @@
             <a href="{{ route('web.perfil') }}" class="nav-link" target="_blank">
                 <i class="fas fa-user"></i> Perfil
             </a>
-        </li>--}}
+        </li>--}}{{--
         @endif
-        {{--<li class="dropdown-divider"></li>--}}
-        {{--<li class="dropdown-divider"></li>
+        --}}{{--<li class="dropdown-divider"></li>--}}{{--
+        --}}{{--<li class="dropdown-divider"></li>
         <li class="nav-item">
             <a href="#" class="nav-link" target="_blank">
                 <i class="fas fa-sign-out-alt"></i> Salir
             </a>
-        </li>--}}
+        </li>--}}{{--
 
 
-    </ul>
+    </ul>--}}
 
 </div>
 

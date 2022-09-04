@@ -1,5 +1,7 @@
 @extends('adminlte::page')
 
+@section('title', 'Perfil')
+@section('plugins.Pace', true)
 
 @section('content')
 

@@ -183,10 +183,9 @@ Comprobaremos si la segunda hora que le pasamos es inferior a la primera, con lo
 Y al final devolveremos true o false dependiendo si el valor introducido se encuentra entre lo que le hemos pasado.*/
 }
 
+function role($i = null, $role = null){
 
-function role($i = null){
-
-    $roles = \App\Models\Parametro::where('tabla_id', '-1')->where('id', $i)->first();
+    $roles = \App\Models\Parametro::where('tabla_id', '-1')->where('id', $role)->first();
     if ($roles){
         return ucwords($roles->nombre);
     }
@@ -196,6 +195,7 @@ function role($i = null){
         '1'     => 'Administrador',
         '100'   => 'Root'
     ];
+
     if (is_null($i)){
         unset($status["100"]);
         return $status;
@@ -204,13 +204,12 @@ function role($i = null){
     }
 }
 
-
 function estatusUsuario($i, $icon = null){
     if (is_null($icon)){
         $suspendido = "Suspendido";
         $activado = "Activo";
     }else{
-        $suspendido = '<i class="fa fa-user-slash"></i>';
+        $suspendido = '<i class="fas fa-user-times"></i>';
         $activado = '<i class="fa fa-user-check"></i>';
     }
 

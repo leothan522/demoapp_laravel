@@ -25,7 +25,7 @@ Route::middleware(['auth', 'isadmin', 'estatus', 'permisos'])->prefix('/dashboar
 
     Route::get('parametros/{parametro?}', [ParametrosController::class, 'index'])->name('parametros.index');
     Route::get('usuarios/{usuario?}', [UsersController::class, 'index'])->name('usuarios.index');
-    //Route::get('export/usuarios/{buscar?}', [UsersController::class, 'export'])->name('usuarios.excel');
+    Route::get('export/usuarios/{buscar?}', [UsersController::class, 'export'])->name('usuarios.excel');
     //Route::get('pdf/usuarios', [UsersController::class, 'createPDF'])->name('usuarios.pdf');
 
 });

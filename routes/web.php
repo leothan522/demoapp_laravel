@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,14 +16,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('web.index');
+
+Route::get('/perfil', function (){
+    return view('profile.show_default');
+})->name('web.perfil')->middleware('auth');
+
+Route::get('/cerrar', function () {
+    Auth::logout();
+    return redirect()->route('web.index');
+})->name('cerrar');
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified'
+    'verified',
+    'isadmin'
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.index');
     })->name('dashboard');
+});
+
+Route::middleware(['auth', 'verified'])->prefix('/web')->group(function (){
+    //web
 });

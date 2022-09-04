@@ -2,7 +2,7 @@
 
     <div class="col-md-3">
 
-        <div class="card card-gray-dark" style="height: inherit; width: inherit; transition: all 0.15s ease 0s;">
+        <div class="card card-gray-dark">
             <div class="card-header">
                 <h3 class="card-title">
                     @if($view == "create")
@@ -36,7 +36,7 @@
 
     <div class="col-md-9">
 
-        <div class="card card-outline card-purple" style="height: inherit; width: inherit; transition: all 0.15s ease 0s;">
+        <div class="card card-outline card-primary">
             <div class="card-header">
                 <h3 class="card-title">
                     @if($busqueda)
