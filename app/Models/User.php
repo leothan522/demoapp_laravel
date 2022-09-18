@@ -34,7 +34,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'roles_id',
         'permisos',
         'plataforma',
-        'dispositivos_id',
+        'fcm_token',
         'profile_photo_path'
     ];
 

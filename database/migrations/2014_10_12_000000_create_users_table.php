@@ -28,7 +28,7 @@ return new class extends Migration
             $table->integer('estatus')->default(1);
             $table->text('permisos')->nullable();
             $table->integer('plataforma')->default(0);
-            $table->text('dispositivos_id')->nullable();
+            $table->text('fcm_token')->nullable();
 
             $table->timestamps();
         });

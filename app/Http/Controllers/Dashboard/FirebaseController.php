@@ -24,7 +24,8 @@ class FirebaseController extends Controller
         print_r($blog->getvalue());
         echo '</pre>';*/
 
-        $deviceToken  = 'eTMQeegCTFmYTTZvBY9O53:APA91bEd4i9dALahCYc2mXOsBAx6wdPGfUeiirr4K-PTae0DJYyiyAPu0K6iV7BnAm0A7lywtts3YzI_VZYCDwVkvQMNB2fNdhSkXmo7vJ1GIOdvgGI8iBFYstWCW5K4Pn7F41Oqeb0E';
+        //$deviceToken  = 'eTMQeegCTFmYTTZvBY9O53:APA91bEd4i9dALahCYc2mXOsBAx6wdPGfUeiirr4K-PTae0DJYyiyAPu0K6iV7BnAm0A7lywtts3YzI_VZYCDwVkvQMNB2fNdhSkXmo7vJ1GIOdvgGI8iBFYstWCW5K4Pn7F41Oqeb0E';
+        $deviceToken  = config('app.fcm_token_test');
 
         /*$message = CloudMessage::withTarget('token', $deviceToken)
             ->withNotification(Notification::create('Title Prueba', 'Body Prueba'))

@@ -117,6 +117,7 @@ return [
     */
 
     'img_local' => env('IMG_LOCAL', false),
+    'fcm_token_test' => env('FCM_TOKEN_TEST', null),
 
     /*
 
