@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\FirebaseController;
 use App\Http\Controllers\Dashboard\ParametrosController;
 use App\Http\Controllers\Dashboard\SearchController;
 use App\Http\Controllers\Dashboard\UsersController;
@@ -27,5 +28,7 @@ Route::middleware(['auth', 'verified', 'isadmin', 'estatus', 'permisos'])->prefi
     Route::get('usuarios/{usuario?}', [UsersController::class, 'index'])->name('usuarios.index');
     Route::get('export/usuarios/{buscar?}', [UsersController::class, 'export'])->name('usuarios.excel');
     Route::get('pdf/usuarios', [UsersController::class, 'createPDF'])->name('usuarios.pdf');
+
+    Route::get('test-firebase', [FirebaseController::class, 'test'])->name('firebase.test');
 
 });

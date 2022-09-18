@@ -210,6 +210,7 @@ return [
 
         //personalizados
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        Kreait\Laravel\Firebase\ServiceProvider::class,
 
     ],
 
