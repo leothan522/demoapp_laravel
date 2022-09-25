@@ -15,6 +15,12 @@
         {!! QrCode::size(100)->generate(Request::url()); !!}
         <p>Escanéame para volver a la página principal.</p>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            @livewire('firebase-component')
+        </div>
+    </div>
 @endsection
 
 @section('footer')

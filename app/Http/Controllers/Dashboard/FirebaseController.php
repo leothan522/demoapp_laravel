@@ -42,9 +42,13 @@ class FirebaseController extends Controller
         ]);
 
         $message = CloudMessage::withTarget('token', $deviceToken)
-            ->withNotification($notification);
+            ->withNotification($notification)
+            ->withData(['key' => 'value']);
 
         $this->messaging->send($message);
+
+        verSweetAlert2('Mensaje Enviado', 'toast');
+        return redirect()->route('dashboard');
 
     }
 
